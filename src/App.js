@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 function Square({ value, onSquareClick }) {
+  /* Componenent */
   return (
     <button className="square" onClick={onSquareClick}>
       {value}
@@ -31,6 +32,7 @@ function Board({ xIsNext, squares, onPlay }) {
   }
 
   return (
+    /* JSX Elements */
     <>
       <div className="status">{status}</div>
       <div className="board-row">
