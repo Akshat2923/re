@@ -67,28 +67,3 @@ export default function Game() {
   );
 }
 ```
-
-## Helper Function: `calculateWinner`
-The `calculateWinner` function is a helper function that checks if there is a winner in the current state of the board. It takes an array of 9 elements (the `squares` array) and returns the winner ('X' or 'O') if there is one, or `null` if there is no winner.
-
-```javascript
-function calculateWinner(squares) {
-  const lines = [
-    [0, 1, 2],
-    [3, 4, 5],
-    [6, 7, 8],
-    [0, 3, 6],
-    [1, 4, 7],
-    [2, 5, 8],
-    [0, 4, 8],
-    [2, 4, 6],
-  ];
-  for (let i = 0; i < lines.length; i++) {
-    const [a, b, c] = lines[i];
-    if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
-      return squares[a];
-    }
-  }
-  return null;
-}
-```
